@@ -1,0 +1,14 @@
+p{
+    color: aqua;
+    text-align: left;
+}
+
+input{
+    color: red;
+    text-align: center;
+}
+
+.mys{
+    font: 700;
+    color: blueviolet
+}
