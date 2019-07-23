@@ -3,21 +3,21 @@
 <head>
     <title>Person</title> 
     <script src="angular.js"></script>
-    <script src="personCtrl.js"></script>  
     <script src="bootstrap.js"></script>
+    <script src="personCtrl.js"></script>  
     <link rel="stylesheet" type="text/css" href="myStyle.css"></link>  
     
 </head>
-<body>
+<body ng-controller="personCtrl">
     <p>Hello World!</p>
-    <p>Name : <input type="text" id="name"></p>
-    <p>Age  : <input type="number" id="age"></p>
-    <p>Password  : <input type="password" id="password"></p>
-    <input type="radio" name="gender" value="male"> Male<br>
-    <input type="radio" name="gender" value="female"> Female<br>
-    <input type="radio" name="gender" value="other"> Other
+    <p>Name : <input type="text" id="name" ng-model="person.name"></p>
+    <p>Age  : <input type="number" id="age" ng-model="person.age"></p>
+    <p>Password  : <input type="password" id="password" ng-model="person.password"></p>
+    <input type="radio" name="gender" value="male" ng-model="person.gender"> Male<br>
+    <input type="radio" name="gender" value="female" ng-model="person.gender"> Female<br>
+    <input type="radio" name="gender" value="other" ng-model="person.gender"> Other
     <br><br>
-    <select id="vehicle">
+    <select id="vehicle" ng-model="person.vehicle">
         <option value="volvo">Volvo</option>
         <option value="Mitsubishi">Mitsubishi</option>
         <option value="Honda">Honda</option>
@@ -26,13 +26,12 @@
       <br>
 
 <br>
-<input id="bike" type="checkbox" name="vehicle1" value="Bike" class="mys"> I have a bike <br>
+<input id="bike" type="checkbox" name="vehicle1" value="Bike" class="mys" ng-model="person.bike"> I have a bike <br>
 <br>
     <button onclick="getPerson()">Click Function!</button>  
-    <div ng-controller="PersonCtrl">
-            <h1>Name</h1>
+    <div>
             <!-- <button ng-click="resetName()">Click to increase time</button> -->
-            <h1>Name = {{person.name}}</h1>
+            <h1>Name : {{person.name}}</h1>
             <pr>Person = {{person | json}}</pr>
     </div>
 </body>
