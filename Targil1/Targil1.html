@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="PersonApp">
+<head>
+    <title>Person</title> 
+    <script src="angular.js"></script>
+    <script src="personCtrl.js"></script>  
+    <script src="bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="myStyle.css"></link>  
+    
+</head>
+<body>
+    <p>Hello World!</p>
+    <p>Name : <input type="text" id="name"></p>
+    <p>Age  : <input type="number" id="age"></p>
+    <p>Password  : <input type="password" id="password"></p>
+    <input type="radio" name="gender" value="male"> Male<br>
+    <input type="radio" name="gender" value="female"> Female<br>
+    <input type="radio" name="gender" value="other"> Other
+    <br><br>
+    <select id="vehicle">
+        <option value="volvo">Volvo</option>
+        <option value="Mitsubishi">Mitsubishi</option>
+        <option value="Honda">Honda</option>
+        <option value="KIA">KIA</option>
+      </select>
+      <br>
+
+<br>
+<input id="bike" type="checkbox" name="vehicle1" value="Bike" class="mys"> I have a bike <br>
+<br>
+    <button onclick="getPerson()">Click Function!</button>  
+    <div ng-controller="PersonCtrl">
+            <h1>Name</h1>
+            <!-- <button ng-click="resetName()">Click to increase time</button> -->
+            <h1>Name = {{person.name}}</h1>
+            <pr>Person = {{person | json}}</pr>
+    </div>
+</body>
+</html>
