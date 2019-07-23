@@ -1,4 +1,4 @@
-module.controller("personCtrl", FormCtrl)
+module.controller("personCtrl", PersonCtrl)
 
 
 // DI dependency injection - IOC
@@ -39,7 +39,7 @@ class Person {
     get name     ()         {return this._name}
     set age      (age)      {this._age = age}
     get age      ()         {return this._age}
-    set password (password) {this.password = password}
+    set password (password) {this._password = password}
     get password ()         {return this._password}
     set gender   (gender)   {this._gender = gender}
     get gender   ()         {return this._gender}
